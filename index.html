@@ -1,0 +1,18 @@
+<head>
+  <title>PWA DEMO</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <h3>something about pwa</h3>
+  <div class="main-text">PWA DEMO</div>
+  <script>
+    if (navigator.serviceWorker != null) {
+      navigator.serviceWorker.register('sw.js')
+      .then(function(registration) {
+        console.log('Registered events at scope: ', registration.scope);
+      });
+    }
+    fetch('./data.json')
+  </script>
+</body>
